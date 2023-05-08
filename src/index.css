@@ -1,5 +1,5 @@
 :root {
-    --azul: #3f4d63;
+    --azul: #28426b;
     --blanco: #ffffff;
     --gris-claro: #e9ebf0;
     --gris: #94a3b8;
@@ -141,9 +141,9 @@ header h1 {
     text-align: center;
 }
 .alerta.error {
-    background-color: var(--blanco);
+    background-color: #b91c1c;
     border-left: 5px solid #b91c1c;
-    color: #b91c1c;
+    color: var(--blanco);
 }
 .alerta.success {
 }
