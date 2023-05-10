@@ -8,7 +8,7 @@ const Modal = ({
   setAnimarModal,
   guardarGasto,
   editarGasto,
-  setEditarGasto
+  setEditarGasto,
 }) => {
   const [mensaje, setMensaje] = useState("");
   const [nombre, setNombre] = useState("");
@@ -18,17 +18,18 @@ const Modal = ({
   const [id, setId] = useState("");
 
   useEffect(() => {
-    if(Object.keys(editarGasto).length > 0) 
-     setNombre(editarGasto.nombre)
-     setCantidad(editarGasto.cantidad)
-     setCategoria(editarGasto.categoria)
-     setFecha(editarGasto.fecha)
-     setId(editarGasto.id)
+    if (Object.keys(editarGasto).length > 0) {
+      setNombre(editarGasto.nombre);
+      setCantidad(editarGasto.cantidad);
+      setCategoria(editarGasto.categoria);
+      setFecha(editarGasto.fecha);
+      setId(editarGasto.id);
+    }
   }, []);
 
   const ocultarModal = () => {
     setAnimarModal(false);
-    setEditarGasto({})
+    setEditarGasto({});
     setTimeout(() => {
       setModal(false);
     }, 500);
@@ -106,7 +107,10 @@ const Modal = ({
             <option value="suscripciones">Suscripciones</option>
           </select>
         </div>
-        <input type="submit" value={editarGasto.nombre ? "Guardar cambios" : "Añadir gasto"} />
+        <input
+          type="submit"
+          value={editarGasto.nombre ? "Guardar cambios" : "Añadir gasto"}
+        />
       </form>
     </div>
   );

@@ -26,16 +26,14 @@ const ListadoGastos = ({
         </>
       ) : (
         <>
-        <h2>
-            {gastos.length ? "Gastos" : "No hay gastos agregados"}
-          </h2>
-         { gastos.map((gasto) => (
-          <Gasto
-            key={gasto.id}
-            gasto={gasto}
-            setEditarGasto={setEditarGasto}
-            eliminarGasto={eliminarGasto}
-          />
+          <h2>{gastos.length ? "Gastos" : "No hay gastos agregados"}</h2>
+          {gastos.map((gasto) => (
+            <Gasto
+              key={gasto.id}
+              gasto={gasto}
+              setEditarGasto={setEditarGasto}
+              eliminarGasto={eliminarGasto}
+            />
           ))}
         </>
       )}
