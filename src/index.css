@@ -5,6 +5,7 @@
     --gris: #94a3b8;
     --gris-oscuro: #64748b;
     --negro: #000;
+    --rojo: #b91c1c;
 }
 
 body {
@@ -141,8 +142,8 @@ header h1 {
     text-align: center;
 }
 .alerta.error {
-    background-color: #b91c1c;
-    border-left: 5px solid #b91c1c;
+    background-color: var(--rojo);
+    border-left: 5px solid --rojo;
     color: var(--blanco);
 }
 .alerta.success {
@@ -207,7 +208,7 @@ header h1 {
 }
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
-    color: red;
+    color: var(--rojo);
 }
 .contenido-presupuesto span {
     font-weight: 900;
@@ -215,7 +216,7 @@ header h1 {
 }
 .reset-app {
     border: none;
-    background-color: #db2777;
+    background-color: var(--rojo);
     padding: 1rem;
     width: 100%;
     text-align: center;
@@ -227,7 +228,7 @@ header h1 {
     transition-duration: 300ms;
 }
 .reset-app:hover {
-    background-color: #c71465;
+    background-color: #8b2222;
     cursor: pointer;
 }
 
@@ -392,7 +393,7 @@ body .modal {
 }
 
 .swipe-action__trailing {
-    background-color: #db2777;
+    background-color: var(--rojo);
     margin-bottom: 2rem;
     color: var(--blanco);
 }
